@@ -294,6 +294,16 @@ def alterar_dados_cadastrais(usuario_logado):
     else:
         print("\nUsuário não está logado. Necessário fazer login para alterar os dados cadastrais.")
 
+def opcao():
+    opcao = input("O que deseja fazer?\n0 - Retornar ao Menu Principal.\n1 - Sair do Sistema.\n")
+    while opcao not in ['0','1']:
+        opcao = input("Opção inválida. Tente novamente.")
+    if opcao == '0':
+        print("Retornando ao menu principal...")
+    elif opcao == '1':
+        print("Encerrando o programa...")
+        exit()
+menu_principal()
 
 
 
