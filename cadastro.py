@@ -110,10 +110,7 @@ def cadastrar_usuario():
     else:
         while not re.match(r"[^@]+@[^@]+\.[^@]+", email):
             print("E-mail inválido. Deve conter '@' e '.'.")
-            email = input("Digite seu e-mail novamente: ")
-                    
-
-
+            email = input("Digite seu e-mail novamente: ")           
 
     cpf = input("Informe seu CPF: ")
 
