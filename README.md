@@ -30,6 +30,7 @@ O usuário deve ter instalado o python versão 3.6 ou superior.
 
 ## Link do vídeo explicativo
 
+https://youtu.be/AHIXfcWsfWc
 
 ## Autores
 
