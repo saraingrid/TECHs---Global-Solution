@@ -1,8 +1,10 @@
 
 import re
 
+# Lista para armazenar os cadastros. Ela vai iniciar em branco.
 usuarios = []
 
+# Lista para armazenar os CPFs inválidos que o usuário pode tentar utilizar.
 blocklist = [
     '00000000000',
     '11111111111',
@@ -16,6 +18,7 @@ blocklist = [
     '99999999999'
 ]
 
+# Menu principal: Ele será responsável por conectar as informações e apartir daqui o usuário vai conseguir ser direcionado conforme precisar.
 def menu_principal():
     while True:
         print("\n*** MENU ***")
@@ -49,6 +52,12 @@ def menu_principal():
             break
         else:
             print("Opção inválida. Tente novamente.")
+
+# Nome: cadastrar_usuario
+# Descrição: Realiza o cadastro de um novo usuário solicitando nome, e-mail, senha e confirmação de senha. Realiza validações
+# nos dados inseridos. Os dados aqui serão inseridos na lista Usuario [] que foi iniciado em branco.
+# Dependência: Nenhuma
+
 def cadastrar_usuario():
     print("\n***CADASTRO DE USUÁRIO***")
     def validar_cpf_2(cpf):
@@ -85,7 +94,8 @@ def cadastrar_usuario():
    
 
         return digito_cpf == f'{digito_1}{digito_2}'
-
+        
+    # Loop para garantir que o nome seja inserido corretamente
     while True:
         nome = input("Digite seu nome: ")
         if nome.replace(" ", "").isalpha():
@@ -112,6 +122,7 @@ def cadastrar_usuario():
             print("E-mail inválido. Deve conter '@' e '.'.")
             email = input("Digite seu e-mail novamente: ")           
 
+    # Verifica se o CPF já está cadastrado
     cpf = input("Informe seu CPF: ")
 
     verificar_cpf = False
@@ -209,6 +220,10 @@ def cadastrar_usuario():
     usuarios.append(usuario)
     print("\nCadastro realizado com sucesso!\n==============================") 
 
+# Nome: listar_usuarios
+# Descrição: Lista todos os usuários cadastrados, exibindo nome e e-mail.
+# Dependência: Ela precisa que o cadastrar_usuário tenha ocorrido para gerar dados dentro da lista de usuarios[]. Se não for executada, não teremos nenhum dado disponível.
+
 def listar_usuarios():
     print("\n***USUÁRIOS CADASTRADOS***")
 
@@ -216,6 +231,9 @@ def listar_usuarios():
         print(f"Nome: {usuario['nome']}, E-mail: {usuario['email']}, CPF: {usuario['cpf']}, Tem Convênio? {usuario['convenio']}, Plano de Saúde: {usuario['plano_saude']}, Conhece ou está no espectro autista: {usuario['conhece_ou_esta_no_espectro']}")
     print()
 
+# Nome: fazer_login
+# Descrição: Realiza o login do usuário solicitando e-mail e senha, verificando se as credenciais são válidas.
+# Dependência: Precisa que tenhamos dados dentro da lista de usuarios[] para que ela possa validar os dados.
 
 def fazer_login():
     print("\n***TELA DE LOGIN***")
@@ -228,6 +246,9 @@ def fazer_login():
             return usuario
     print("\nNão foi possível fazer login. E-mail ou senha incorretos.")
 
+# Nome: alterar_senha
+# Descrição: Altera a senha do usuário logado, solicitando a senha atual e a nova senha, realizando validações.
+# Dependência: Necessita que o usuário esteja logado. A função Login já terá diso executada.
 
 usuario_logado = None
 
@@ -262,6 +283,9 @@ def alterar_senha(usuario_logado):
     else:
         print("Usuário não está logado. Necessário fazer login para alterar a senha.")
 
+# Nome: alterar_dados_cadastrais
+# Descrição: Permite ao usuário logado alterar seu nome ou e-mail.
+# Dependência: Necessita que o usuário esteja logado. 
 
 usuario_logado = None
 
@@ -294,6 +318,10 @@ def alterar_dados_cadastrais(usuario_logado):
     else:
         print("\nUsuário não está logado. Necessário fazer login para alterar os dados cadastrais.")
 
+# Nome: opcao
+# Descrição: Exibe um menu de opções para o usuário, permitindo voltar ao menu anterior ou encerrar o programa.
+# Dependência: Nenhuma
+
 def opcao():
     opcao = input("O que deseja fazer?\n0 - Retornar ao Menu Principal.\n1 - Sair do Sistema.\n")
     while opcao not in ['0','1']:
@@ -303,6 +331,8 @@ def opcao():
     elif opcao == '1':
         print("Encerrando o programa...")
         exit()
+
+# Chamar a função principal e fazer o processo acontecer.
 menu_principal()
 
 
