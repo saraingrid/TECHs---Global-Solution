@@ -2,10 +2,14 @@
 
 Nosso projeto visa integrar informações sobre a condição e comportamentos de uma pessoa que está no espectro. Buscamos reunir o máximo de dados baseados em questionários e diários de acompanhamento fornecidos pelos usuários para gerar modelagens que identifiquem padrões de comportamento para contribuir com a comunidade e gerar laudos mais rápidos e precisos auxiliando no diagnóstico eficaz da condição.
 
+## Contexto do problema
+De acordo com a Organização Mundial da Saúde (OMS), em 2021, estima-se que 1 em cada 160 crianças em todo o mundo tenha TEA.
+Problemas como falta de acesso adequado ao tratamento e diagnostico, falta de recursos financeiros e falta de instruções e treinamentos claros à população quanto ao Espectro Autista são alguns dos pontos que permeiam a vida tanto das famílias quando aos que estão no Espectro.
+Por isso, é crucial que haja esforços contínuos para aumentar a conscientização, melhorar o treinamento profissional e eliminar barreiras para garantir que os indivíduos autistas tenham acesso equitativo a serviços de saúde. As políticas de saúde mental inclusivas e centradas no paciente são fundamentais para abordar essas dificuldades.
 
 ## Principais Funcionalidades
 
-Nosso projeto  em Python oferece uma plataforma para realizar cadastro e o login dos usuários que desejam contribuir com a conteúdos sobre o espectro autista. Os visitantes podem se cadastrar para ter acesso a mais funcionalidades e informações relacionadas ao espectro. A aplicação inclui funcionalidades como cadastro, login, alteração de senha e dados cadastrais. **Abaixo breve descrição de cada função:**
+Com foco em reduzir o índice de diagnostico tardio, nosso projeto em Python oferece uma plataforma para realizar cadastro e o login dos usuários que desejam contribuir com a conteúdos sobre o espectro autista. Os visitantes podem se cadastrar para ter acesso a mais funcionalidades e informações relacionadas ao espectro. A aplicação inclui funcionalidades como cadastro, login, alteração de senha e dados cadastrais. **Abaixo breve descrição de cada função:**
 
 
 1.  **Cadastro de Usuários:**
